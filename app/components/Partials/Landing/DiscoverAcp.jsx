@@ -18,7 +18,7 @@ const DiscoverAcp = () => {
       </HeadingContainer>
       <section>
         <div className="grid grid-cols-12 gap-3">
-          <div className="flex flex-col col-span-4 gap-y-3">
+          <div className="flex flex-col col-span-12 lg:col-span-4 gap-y-3">
             <DiscoverCard imageSrc={OurStoryImage} imageAlt="Our Story">
               <p className="mb-1 text-2xl fone-medium">Our Story</p>
               <Button>Learn More</Button>
@@ -28,7 +28,7 @@ const DiscoverAcp = () => {
               <Button>Learn More</Button>
             </DiscoverCard>
           </div>
-          <div className="col-span-8 ">
+          <div className="col-span-12 lg:col-span-8 ">
             <DiscoverCard imageSrc={ArtisanStoryImage} imageAlt="Our Journal">
               <p className="mb-1 text-2xl fone-medium">Our Artisan Story</p>
               <Button>Learn More</Button>

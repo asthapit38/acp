@@ -12,19 +12,20 @@ import {
   PhoneIcon,
   PrinterIcon,
 } from "@heroicons/react/24/outline";
+import Container from "@/app/components/ui/Container";
 
 export default function About() {
   const title = "Discover Our Story: Who We Are and What We Stand For";
   return (
-    <div className="">
+    <>
       <Banner title={title}>
-        <div className="relative z-20 flex flex-col items-center justify-center h-full max-w-5xl mx-auto">
+        <div className="relative z-20 flex flex-col items-center justify-center h-full max-w-5xl px-4 mx-auto xl:px-0">
           <h3 className="text-4xl font-bold leading-normal text-background font-title">
             {title}
           </h3>
         </div>
       </Banner>
-      <div className="flex flex-col max-w-5xl mx-auto mt-6 gap-y-6">
+      <Container>
         <article className="space-y-4">
           <p className="text-2xl font-bold leading-relaxed tracking-wider text-primary font-title">
             The Organization - ACP
@@ -196,12 +197,11 @@ export default function About() {
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7856.8627753217625!2d85.28883546620187!3d27.699599596656284!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb186706b12533%3A0x88f209a4e803793a!2sAssociation%20of%20Craft%20Producers!5e0!3m2!1sen!2snp!4v1682914912032!5m2!1sen!2snp"
               className="w-full h-full"
-              allowfullscreen=""
               loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade"
+              referrerPolicy="no-referrer-when-downgrade"
             ></iframe>
           </div>
-          <div className="absolute max-w-xs p-6 space-y-5 bg-white rounded-md shadow-md bottom-4 right-4">
+          <div className="relative w-full p-6 mt-4 space-y-5 bg-white rounded-md shadow-md lg:mt-0 lg:max-w-xs lg:absolute lg:bottom-4 lg:right-4">
             <div className="space-y-2 opening-hours">
               <p className="text-xl font-bold leading-relaxed tracking-wider text-primary font-title">
                 Opening Hours
@@ -242,7 +242,7 @@ export default function About() {
             </div>
           </div>
         </div>
-      </div>
-    </div>
+      </Container>
+    </>
   );
 }

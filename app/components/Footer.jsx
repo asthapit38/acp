@@ -8,8 +8,8 @@ const Footer = () => {
   const headingStyle = "text-xl font-medium";
   return (
     <footer className="p-6 mt-16 bg-black">
-      <div className="max-w-5xl mx-auto text-white">
-        <div className="grid grid-cols-3 gap-x-6">
+      <div className="max-w-5xl px-4 mx-auto text-white lg:px-0">
+        <div className="grid grid-cols-1 gap-6 lg:grid-cols-3">
           <article className="space-y-3">
             <h6 className={headingStyle + " " + playfairDisplay.className}>
               Connect

@@ -26,7 +26,7 @@ const Journal = () => {
         various benefits and programs for their producers' welfare and
         conservation of the environment.
       </HeadingContainer>
-      <div className="grid justify-start grid-cols-3 gap-x-6">
+      <div className="grid justify-start grid-cols-1 gap-6 lg:grid-cols-3">
         {blogs.map((blog, index) => (
           <BlogCard title={blog.title} date={blog.date} key={index} />
         ))}

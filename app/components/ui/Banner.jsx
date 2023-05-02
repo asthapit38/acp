@@ -1,17 +1,20 @@
 import { cva } from "class-variance-authority";
 import Image from "next/image";
 
-const bannerClass = cva("relative z-20 flex h-full max-w-5xl mx-auto", {
-  variants: {
-    type: {
-      regular: "justify-center items-center flex-col",
-      artisan: "justify-between items-center flex-row ",
+const bannerClass = cva(
+  "relative z-20 flex h-full max-w-5xl mx-auto xl:px-0 px-4",
+  {
+    variants: {
+      type: {
+        regular: "justify-center items-center flex-col",
+        artisan: "justify-between items-center flex-row ",
+      },
     },
-  },
-  defaultVariants: {
-    type: "regular",
-  },
-});
+    defaultVariants: {
+      type: "regular",
+    },
+  }
+);
 
 const Banner = ({ title, image, type, children }) => {
   return (

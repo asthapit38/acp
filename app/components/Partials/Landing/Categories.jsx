@@ -18,9 +18,25 @@ const Categories = () => {
     created() {
       setLoaded(true);
     },
-    slides: {
-      perView: 2.35,
-      spacing: 15,
+    breakpoints: {
+      "(min-width: 768px)": {
+        slides: {
+          perView: 1.5,
+          spacing: 16,
+        },
+      },
+      "(min-width: 640px)": {
+        slides: {
+          perView: 1.25,
+          spacing: 16,
+        },
+      },
+      "(min-width: 1024px)": {
+        slides: {
+          perView: 2.5,
+          spacing: 16,
+        },
+      },
     },
   });
   return (

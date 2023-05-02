@@ -3,7 +3,7 @@ import Heading from "@/app/components/ui/Heading/Heading";
 import Link from "next/link";
 export default function ProductDetail() {
   return (
-    <div className="max-w-5xl mx-auto mt-4">
+    <div className="max-w-5xl mx-auto xl:px-0 px-4 mt-4">
       <div className="grid grid-cols-2 gap-y-3">
         <div className="bg-gray-400"></div>
         <div className="p-4 space-y-3">

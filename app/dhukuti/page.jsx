@@ -14,7 +14,7 @@ import {
 
 export default function Dhukuti() {
   return (
-    <div className="max-w-5xl mx-auto mt-6 space-y-8">
+    <div className="max-w-5xl px-4 mx-auto mt-6 space-y-8 lg:px-0">
       <div className="flex items-center justify-center">
         <Image
           src="/images/logos/dhukuti-logo.png"
@@ -42,12 +42,11 @@ export default function Dhukuti() {
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14132.05036706273!2d85.3178612!3d27.6860057!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb19b43fffcf93%3A0xe3e71155015d28ed!2sDhukuti%20Store!5e0!3m2!1sen!2snp!4v1682914474488!5m2!1sen!2snp"
             className="w-full h-full"
-            allowfullscreen=""
             loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
+            referrerPolicy="no-referrer-when-downgrade"
           ></iframe>
         </div>
-        <div className="absolute max-w-xs p-6 space-y-5 bg-white rounded-md shadow-md bottom-4 right-4">
+        <div className="relative w-full p-6 mt-4 space-y-5 bg-white rounded-md shadow-md lg:mt-0 lg:max-w-xs lg:absolute lg:bottom-4 lg:right-4">
           <div className="space-y-2 opening-hours">
             <p className="text-xl font-bold leading-relaxed tracking-wider text-primary font-title">
               Opening Hours
