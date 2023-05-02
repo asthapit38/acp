@@ -3,10 +3,10 @@ import Heading from "@/app/components/ui/Heading/Heading";
 import Link from "next/link";
 export default function ProductDetail() {
   return (
-    <div className="max-w-5xl mx-auto xl:px-0 px-4 mt-4">
-      <div className="grid grid-cols-2 gap-y-3">
-        <div className="bg-gray-400"></div>
-        <div className="p-4 space-y-3">
+    <div className="max-w-5xl px-4 mx-auto mt-4 xl:px-0 ">
+      <div className="grid grid-cols-1 gap-3 lg:grid-cols-2">
+        <div className="bg-gray-400 min-h-[384px]"></div>
+        <div className="space-y-3">
           <p className="tracking-wider text-gray-600 uppercase">
             Cotton Textiles
           </p>
