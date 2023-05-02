@@ -42,7 +42,9 @@ const MainNavigation = () => {
         </div>
         <div className="flex items-center left-nav gap-x-2">
           <MagnifyingGlassIcon className="w-5 h-5" />
-          <UserIcon className="w-5 h-5" />
+          <Link href="/login">
+            <UserIcon className="w-5 h-5" />
+          </Link>
         </div>
       </ul>
     </div>

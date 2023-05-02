@@ -18,7 +18,7 @@ const ProductSlider = () => {
       setLoaded(true);
     },
     slides: {
-      perView: 2.35,
+      perView: 3.25,
       spacing: 15,
     },
   });
@@ -39,6 +39,12 @@ const ProductSlider = () => {
         </button>
       </div>
       <div ref={sliderRef} className="keen-slider">
+        <div className="relative w-full keen-slider__slide">
+          <ProductCard title="Product one" code="234324" price="500" />
+        </div>
+        <div className="relative w-full keen-slider__slide">
+          <ProductCard title="Product one" code="234324" price="500" />
+        </div>
         <div className="relative w-full keen-slider__slide">
           <ProductCard title="Product one" code="234324" price="500" />
         </div>

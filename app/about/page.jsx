@@ -14,9 +14,16 @@ import {
 } from "@heroicons/react/24/outline";
 
 export default function About() {
+  const title = "Discover Our Story: Who We Are and What We Stand For";
   return (
     <div className="">
-      <Banner title="Discover Our Story: Who We Are and What We Stand For" />
+      <Banner title={title}>
+        <div className="relative z-20 flex flex-col items-center justify-center h-full max-w-5xl mx-auto">
+          <h3 className="text-4xl font-bold leading-normal text-background font-title">
+            {title}
+          </h3>
+        </div>
+      </Banner>
       <div className="flex flex-col max-w-5xl mx-auto mt-6 gap-y-6">
         <article className="space-y-4">
           <p className="text-2xl font-bold leading-relaxed tracking-wider text-primary font-title">

@@ -6,6 +6,7 @@ const Hero = () => {
     <div className="hero h-[calc(100vh-160px)] flex justify-center items-center relative ">
       <div className="absolute inset-0 w-full h-full overflow-hidden -z-10">
         <Image
+          priority
           src="/images/hero-background.png"
           fill
           sizes="width: 100%"

@@ -1,7 +1,11 @@
+import Banner from "../components/ui/Banner";
+
 export default function ArtisanStory() {
   return (
     <div>
-      <p>this is artisan story page</p>
+      <Banner title="Mamta jha" type="artisan">
+        <button>Hello</button>
+      </Banner>
     </div>
   );
 }

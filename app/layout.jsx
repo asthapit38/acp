@@ -7,9 +7,9 @@ const quickSand = Quicksand({
   subsets: ["latin"],
   variable: "--font-quickSand",
 });
-const playfairDisplay = Playfair_Display({
+const playFairDisplay = Playfair_Display({
   subsets: ["latin"],
-  variable: "--font-playFair",
+  variable: "--font-playFairDisplay",
 });
 
 export const metadata = {
@@ -21,7 +21,7 @@ export default function RootLayout({ children }) {
   return (
     <html
       lang="en"
-      className={`${quickSand.variable} ${playfairDisplay.variable}`}
+      className={`${quickSand.variable} ${playFairDisplay.variable}`}
     >
       <body className="font-body">
         <Navigation />

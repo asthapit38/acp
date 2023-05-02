@@ -1,7 +1,7 @@
 import { cva } from "class-variance-authority";
 
 const ButtonVariants = cva(
-  "relative uppercase tracking-widest font-medium border border-1 bg-transparent transition-colors before:absolute before:top-0 before:-z-10 before:h-full before:w-full before:transition-transform before:duration-300 before:content-[''] self-center before:hover:scale-x-100 before:scale-x-0 ",
+  "relative uppercase tracking-widest font-medium border border-1 bg-transparent transition-colors before:absolute before:top-0 before:-z-10 before:h-full before:w-full before:transition-transform before:duration-300 before:content-[''] before:hover:scale-x-100 before:scale-x-0 ",
   {
     variants: {
       direction: {
@@ -14,6 +14,10 @@ const ButtonVariants = cva(
         secondary:
           "text-primary hover:border-black before:bg-black hover:text-background border-primary",
       },
+      width: {
+        full: "w-full",
+        default: "self-center ",
+      },
       size: {
         medium: "py-2.5 px-5 text-sm ",
         small: "py-1.5 px-1.5 text-xs",
@@ -24,13 +28,14 @@ const ButtonVariants = cva(
       intent: "primary",
       size: "medium",
       direction: "left",
+      width: "default",
     },
   }
 );
-const Button = ({ intent, size, direction, onPress, children }) => {
+const Button = ({ intent, size, direction, onPress, width, children }) => {
   return (
     <button
-      className={ButtonVariants({ intent, size, direction })}
+      className={ButtonVariants({ intent, size, direction, width })}
       onClick={onPress}
     >
       {children}

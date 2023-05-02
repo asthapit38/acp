@@ -13,7 +13,7 @@ module.exports = {
     extend: {
       fontFamily: {
         body: "var(--font-quickSand)",
-        title: "var(--font-playFair)",
+        title: "var(--font-playFairDisplay)",
       },
       colors: {
         black: "#121212",
