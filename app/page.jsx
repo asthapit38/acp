@@ -8,6 +8,7 @@ import Reveal from "./components/ui/Reveal";
 
 export default function Home() {
   return (
+    // todo - change the slider.
     <main>
       <Hero />
       <div className="flex flex-col max-w-5xl px-4 mx-auto mt-6 xl:px-0 gap-y-16">
