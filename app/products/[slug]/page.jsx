@@ -29,16 +29,6 @@ export default function ProductDetail() {
               tristique tristique.
             </p>
           </div>
-          <div className="price">
-            {/* unauthenticated user */}
-            <div className="inline-flex gap-x-1">
-              <Link className="font-bold underline" href="/">
-                Login
-              </Link>
-              <span>for pricing informations</span>
-            </div>
-            {/* authenticated user */}
-          </div>
         </div>
       </div>
       <div className="mt-8">

@@ -10,7 +10,6 @@ const ProductCard = ({ code, title, price }) => {
       <div className="p-2 card-body">
         <p className="text-sm text-gray-400">{code}</p>
         <p className="text-lg font-bold">{title}</p>
-        <p>Rs. {price}</p>
       </div>
     </Link>
   );

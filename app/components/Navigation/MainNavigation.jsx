@@ -1,9 +1,7 @@
 "use client";
-
 import {
   Bars3Icon,
   MagnifyingGlassIcon,
-  UserIcon,
   XMarkIcon,
 } from "@heroicons/react/24/outline";
 import { motion, useCycle, AnimatePresence } from "framer-motion";
@@ -73,9 +71,6 @@ const MainNavigation = () => {
         </div>
         <div className="flex items-center left-nav gap-x-2">
           <MagnifyingGlassIcon className="w-5 h-5" />
-          <Link href="/login">
-            <UserIcon className="w-5 h-5" />
-          </Link>
         </div>
       </ul>
       {/* mobile navigation */}
@@ -122,9 +117,6 @@ const MainNavigation = () => {
                 className="flex items-center left-nav gap-x-2"
               >
                 <MagnifyingGlassIcon className="w-8 h-8" />
-                <Link href="/login">
-                  <UserIcon className="w-8 h-8" />
-                </Link>
               </motion.div>
             </motion.div>
           </motion.aside>

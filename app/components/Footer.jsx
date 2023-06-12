@@ -50,9 +50,6 @@ const Footer = () => {
             <Link href="" className="block">
               Terms & Conditions
             </Link>
-            <Link href="" className="block">
-              Download our Catalogue
-            </Link>
           </div>
         </div>
       </div>
