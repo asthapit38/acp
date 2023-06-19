@@ -1,15 +1,26 @@
 "use client";
-
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { ChevronDownIcon } from "@heroicons/react/24/outline";
 import Link from "next/link";
-import { useRouter } from "next/navigation";
-import CategoriesData from "@/data/categories.json";
+import { fetchDataFromApi } from "@/utils/api";
 
 const ProductNavList = () => {
   const [open, setOpen] = useState(false);
+  const [categories, setCategories] = useState(null);
 
+  const closeList = (event) => {
+    event.stopPropagation();
+    console.log("namaste");
+    setOpen(false);
+  };
+  const getCategories = async () => {
+    const { data } = await fetchDataFromApi("/api/categories?select=['name']");
+    setCategories(data);
+  };
+  useEffect(() => {
+    getCategories();
+  }, []);
   return (
     <li className="font-normal" onClick={() => setOpen((pv) => !pv)}>
       <motion.div animate={open ? "open" : "closed"} className="relative">
@@ -19,33 +30,41 @@ const ProductNavList = () => {
             <ChevronDownIcon className="w-4 h-4" />
           </motion.span>
         </button>
+        {open && (
+          <div
+            tabIndex="-1"
+            className="fixed inset-0 z-20 w-full h-screen"
+            onClick={closeList}
+          ></div>
+        )}
+
         <motion.ul
           initial={wrapperVariants.closed}
           variants={wrapperVariants}
           style={{ originY: "top" }}
-          className="absolute z-50 flex flex-col gap-2 p-2 bg-white rounded-lg shadow-xl w-72 min-w-fit"
+          className="absolute max-h-[400px] overflow-y-scroll z-50 flex flex-col gap-2 p-2 bg-white rounded-lg shadow-xl w-72 min-w-fit"
         >
-          {CategoriesData.data.map((category, index) => (
-            <Option
-              setOpen={setOpen}
-              text={category.name}
-              key={category + index}
-            />
-          ))}
+          {categories &&
+            categories.map((category) => (
+              <Option
+                setOpen={setOpen}
+                text={category.attributes.name}
+                key={category.id}
+              />
+            ))}
         </motion.ul>
       </motion.div>
     </li>
   );
 };
 
-const Option = ({ text, setOpen }) => {
-  const router = useRouter();
+const Option = ({ text }) => {
   return (
     <motion.li
       variants={itemVariants}
       className="flex items-center w-full gap-2 p-2 font-medium transition-colors ease-linear rounded-lg hover:bg-primary/30"
     >
-      <Link href="/products">
+      <Link href="/categories/category-slug">
         <span className="capitalize">{text}</span>
       </Link>
     </motion.li>

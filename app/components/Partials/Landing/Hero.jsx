@@ -19,7 +19,7 @@ const Hero = () => {
       </div>
       <div className="absolute inset-0 w-full h-full overlap bg-black/50"></div>
       <Reveal>
-        <div className="relative z-20 flex flex-col max-w-lg mx-auto text-center text-background gap-y-4">
+        <div className="relative z-10 flex flex-col max-w-lg mx-auto text-center text-background gap-y-4">
           <p className="text-4xl font-bold leading-normal font-title">
             Crafting a Better Future for Nepalese Artisans
           </p>

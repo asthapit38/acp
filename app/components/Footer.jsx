@@ -1,50 +1,44 @@
 import Image from "next/image";
-import { playfairDisplay } from "../utils/font";
-import facebookIcon from "@/public/images/icons/facebook.svg";
-import instagramIcon from "@/public/images/icons/instagram.svg";
-import pinterestIcon from "@/public/images/icons/pinterest.svg";
 import Link from "next/link";
+import acpSocial from "@/data/acpSocial.json";
 const Footer = () => {
-  const headingStyle = "text-xl font-medium";
   return (
     <footer className="p-6 mt-16 bg-black">
       <div className="max-w-5xl px-4 mx-auto text-white lg:px-0">
         <div className="grid grid-cols-1 gap-6 lg:grid-cols-3">
           <article className="space-y-3">
-            <h6 className={headingStyle + " " + playfairDisplay.className}>
-              Connect
-            </h6>
+            <h6 className="text-xl font-medium font-title">Connect</h6>
             <p className="font-light">
               <span className="block">Association for Craft Producers </span>
-              <span className="block">GPO Box 3701 Ravi Bhawan Mode </span>
+              <span className="block">GPO Box 3701 </span>
+              <span className="block">Ravi Bhawan Mode</span>
               <span className="block">Kathmandu, Nepal</span>
             </p>
             <p className="font-light">
-              <span className="block">Office: +977-1-4275108, 4270721 </span>
-              <span className="block">Fax: +977-1-4272676 </span>
+              <span className="block">
+                Office: +977-1-5388705, 5234616, 5370721
+              </span>
               <span className="block">Email: export@craftacp.org.np</span>
             </p>
           </article>
           <article className="space-y-3">
-            <h6 className={headingStyle + " " + playfairDisplay.className}>
-              Follow us on
-            </h6>
-            <div className="flex gap-x-3">
-              <Image priority src={facebookIcon} alt="Follow us on facebook" />
-              <Image
-                priority
-                src={instagramIcon}
-                alt="Follow us on instagram"
-              />
-              <Image
-                priority
-                src={pinterestIcon}
-                alt="Follow us on pinterest"
-              />
+            <h6 className="text-xl font-medium font-title">Follow us on</h6>
+            <div className="flex items-center gap-x-3">
+              {acpSocial.data.map((social) => (
+                <a href={social.url} target="_blank">
+                  <Image
+                    priority
+                    src={social.icon}
+                    width={28}
+                    height={28}
+                    alt={`Follow us on ${social.media}`}
+                  />
+                </a>
+              ))}
             </div>
           </article>
           <div className="space-y-3 ">
-            <h6 className={headingStyle + " " + playfairDisplay.className}>
+            <h6 className="text-xl font-medium font-title">
               Export Processing
             </h6>
             <Link href="" className="block">

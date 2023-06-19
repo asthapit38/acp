@@ -1,0 +1,14 @@
+{
+  "data": [
+    {
+      "media": "facebook",
+      "icon": "images/icons/facebook.svg",
+      "url": "https://www.facebook.com/DhukutiACP"
+    },
+    {
+      "media": "instagram",
+      "icon": "images/icons/instagram.svg",
+      "url": "https://www.instagram.com/dhukuti/"
+    }
+  ]
+}

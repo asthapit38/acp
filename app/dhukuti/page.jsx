@@ -5,6 +5,8 @@ import {
   PhoneIcon,
 } from "@heroicons/react/24/outline";
 import Image from "next/image";
+import dhukutiSocial from "@/data/dhukutiSocial.json";
+
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faFacebookSquare,
@@ -53,7 +55,7 @@ export default function Dhukuti() {
             </p>
             <div className="flex gap-x-2">
               <ClockIcon className="w-6 h-6" />
-              <span>10 am to 6 pm (Sunday - Friday)</span>
+              <span>Opens everyday 10 am to 7 pm</span>
             </div>
           </div>
           <div className="space-y-2 opening-hours">
@@ -76,9 +78,19 @@ export default function Dhukuti() {
           <div className="space-y-2 social-icon">
             <p>Connect with us, we’d love to hear from you!</p>
             <div className="flex gap-x-3 text-primary">
-              <FontAwesomeIcon icon={faFacebookSquare} className="w-8 h-8 " />
-              <FontAwesomeIcon icon={faInstagram} className="w-8 h-8 " />
-              <FontAwesomeIcon icon={faPinterest} className="w-8 h-8 " />
+              {dhukutiSocial.data.map((social, index) => (
+                <a href={social.url} target="_blank" key={index}>
+                  {social.media === "facebook" && (
+                    <FontAwesomeIcon
+                      icon={faFacebookSquare}
+                      className="w-8 h-8 "
+                    />
+                  )}
+                  {social.media === "instagram" && (
+                    <FontAwesomeIcon icon={faInstagram} className="w-8 h-8 " />
+                  )}
+                </a>
+              ))}
             </div>
           </div>
         </div>

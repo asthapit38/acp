@@ -1,4 +1,5 @@
 import Banner from "@/app/components/ui/Banner";
+import acpSocial from "@/data/acpSocial.json";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faFacebookSquare,
@@ -10,7 +11,6 @@ import {
   EnvelopeIcon,
   MapPinIcon,
   PhoneIcon,
-  PrinterIcon,
 } from "@heroicons/react/24/outline";
 import Container from "@/app/components/ui/Container";
 
@@ -208,7 +208,7 @@ export default function About() {
               </p>
               <div className="flex gap-x-2">
                 <ClockIcon className="w-6 h-6" />
-                <span>10 am to 6 pm (Sunday - Friday)</span>
+                <span>9:30 am to 5:30 pm (Sunday - Friday)</span>
               </div>
             </div>
             <div className="space-y-2 opening-hours">
@@ -217,11 +217,7 @@ export default function About() {
               </p>
               <div className="flex gap-x-2">
                 <PhoneIcon className="w-6 h-6" />
-                <span>977-1-4275108, 4270721</span>
-              </div>
-              <div className="flex gap-x-2">
-                <PrinterIcon className="w-6 h-6" />
-                <span>+977-1-4272676</span>
+                <span>+977-1-5388705, 5234616, 5370721</span>
               </div>
               <div className="flex gap-x-2">
                 <EnvelopeIcon className="w-6 h-6" />
@@ -229,15 +225,34 @@ export default function About() {
               </div>
               <div className="flex gap-x-2">
                 <MapPinIcon className="w-6 h-6" />
-                <span>Kupondole, Lalitpur, Nepal</span>
+                <span>Ravi Bhawan Mode, Kathmandu, Nepal</span>
               </div>
             </div>
             <div className="space-y-2 social-icon">
               <p>Connect with us, we’d love to hear from you!</p>
               <div className="flex gap-x-3 text-primary">
-                <FontAwesomeIcon icon={faFacebookSquare} className="w-8 h-8 " />
-                <FontAwesomeIcon icon={faInstagram} className="w-8 h-8 " />
-                <FontAwesomeIcon icon={faPinterest} className="w-8 h-8 " />
+                {acpSocial.data.map((social, index) => (
+                  <a href={social.url} target="_blank" key={index}>
+                    {social.media === "facebook" && (
+                      <FontAwesomeIcon
+                        icon={faFacebookSquare}
+                        className="w-8 h-8 "
+                      />
+                    )}
+                    {social.media === "instagram" && (
+                      <FontAwesomeIcon
+                        icon={faInstagram}
+                        className="w-8 h-8 "
+                      />
+                    )}
+                    {social.media === "pinterest" && (
+                      <FontAwesomeIcon
+                        icon={faPinterest}
+                        className="w-8 h-8 "
+                      />
+                    )}
+                  </a>
+                ))}
               </div>
             </div>
           </div>

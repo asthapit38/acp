@@ -4,9 +4,8 @@ import NewProduct from "@/app/components/Partials/Landing/new-product/NewProduct
 import Journal from "./components/Partials/Landing/Journal";
 import Categories from "@/app/components/Partials/Landing/Categories";
 import EventWrapper from "./components/Partials/Landing/EventWrapper";
-import Reveal from "./components/ui/Reveal";
 
-export default function Home() {
+export default async function Home() {
   return (
     // todo - change the slider.
     <main>

@@ -1,35 +1,38 @@
-import Banner from "@/app/components/ui/Banner";
 import ProductCard from "@/app/components/ui/ProductCard";
-const title = "Cotton Textiles";
-import BannerImage from "@/public/images/categories/cotton_textiles.jpeg";
 
-export default function Category() {
+export default function Page() {
   return (
-    <>
-      <Banner title={title} image={BannerImage}>
-        <div className="relative z-20 flex flex-col items-center justify-center h-full max-w-5xl mx-auto xl:px-0 px-4">
-          <h3 className="text-4xl font-bold leading-normal text-background font-title">
-            {title}
-          </h3>
+    <div className="max-w-5xl px-4 mx-auto mt-6 lg:px-0">
+      <div className="grid items-center grid-cols-1 py-5 border-b lg:grid-cols-2 gap-x-5">
+        <div className="text-center">
+          <h1 className="text-3xl font-medium leading-relaxed tracking-wider uppercase font-title ">
+            All Products
+          </h1>
+          <p className="text-sm text-gray-500">
+            Introducing our new season collections, from statement lighting to
+            stylish rattan garden furniture. Find texture in abundance with
+            handwoven textiles and tactile ceramics, and embrace organic forms
+            and silhouettes through handcrafted and reclaimed decorative objet.
+          </p>
         </div>
-      </Banner>
-      <div className="flex flex-col max-w-5xl mx-auto xl:px-0 px-4 mt-6 gap-y-6">
-        <p className="font-light leading-loose">
-          Cotton textiles refer to fabrics and products made from cotton fibers.
-          Cotton is a natural and versatile material that is widely used in the
-          textile industry due to its softness, breathability, and durability.
-        </p>
-
-        <div className="grid w-full grid-cols-3 mt-4 gap-x-2 gap-y-4">
-          <ProductCard title="Product one" code="234324" price="500" />
-          <ProductCard title="Product one" code="234324" price="500" />
-          <ProductCard title="Product one" code="234324" price="500" />
-          <ProductCard title="Product one" code="234324" price="500" />
-          <ProductCard title="Product one" code="234324" price="500" />
-          <ProductCard title="Product one" code="234324" price="500" />
-          <ProductCard title="Product one" code="234324" price="500" />
-        </div>
+        <div className="hidden w-full bg-gray-400 aspect-video lg:block"></div>
       </div>
-    </>
+      {/* filter */}
+      <select name="" id="" className="border py-2.5">
+        <option value="">Relevance</option>
+        <option value="">Popular</option>
+        <option value="">Newest</option>
+      </select>
+      {/* display the products */}
+      <div className="grid w-full grid-cols-1 mt-4 md:grid-cols-2 lg:grid-cols-3 gap-x-2 gap-y-4">
+        <ProductCard title="Product one" code="234324" price="500" />
+        <ProductCard title="Product one" code="234324" price="500" />
+        <ProductCard title="Product one" code="234324" price="500" />
+        <ProductCard title="Product one" code="234324" price="500" />
+        <ProductCard title="Product one" code="234324" price="500" />
+        <ProductCard title="Product one" code="234324" price="500" />
+        <ProductCard title="Product one" code="234324" price="500" />
+      </div>
+    </div>
   );
 }
