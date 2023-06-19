@@ -18,7 +18,7 @@ const bannerClass = cva(
 
 const Banner = ({ title, image, type, children }) => {
   return (
-    <div className="relative bg-gray-400 h-96">
+    <div className="relative bg-gray-400 h-[424px]">
       <div className="absolute inset-0 w-full h-full ">
         <Image
           src={image}
@@ -30,7 +30,7 @@ const Banner = ({ title, image, type, children }) => {
           }}
         />
       </div>
-      <div className="absolute inset-0 w-full h-full bg-black/40"></div>
+      <div className="absolute inset-0 w-full h-full bg-black/60"></div>
       {children}
     </div>
   );

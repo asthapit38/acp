@@ -1,8 +1,8 @@
 "use client";
 import DiscoverCard from "@/app/components/ui/DiscoverCard";
-import OurStoryImage from "@/public/images/discover_section/image-one.jpeg";
+import OurStoryImage from "@/public/images/discover_section/story.JPG";
 import OurValuesImage from "@/public/images/discover_section/our-values.jpeg";
-import ArtisanStoryImage from "@/public/images/discover_section/artisan-story.jpeg";
+import ArtisanStoryImage from "@/public/images/discover_section/artisan-stry-thumb.JPG";
 import Button from "@/app/components/ui/Button";
 import HeadingContainer from "@/app/components/ui/Heading/HeadingContainer";
 import Reveal from "../../ui/Reveal";

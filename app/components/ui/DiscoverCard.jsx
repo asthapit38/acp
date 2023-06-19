@@ -13,7 +13,7 @@ const DiscoverCard = ({ imageSrc, imageAlt, children }) => {
           objectFit: "cover",
         }}
       />
-      <div className="absolute inset-0 w-full h-full bg-black/30">
+      <div className="absolute inset-0 w-full h-full bg-black/50">
         <div className="relative z-20 flex flex-col items-center justify-end w-full h-full pb-10">
           {children}
         </div>
