@@ -1,6 +1,10 @@
 "use client";
 import { motion, useCycle, AnimatePresence } from "framer-motion";
-import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
+import {
+  Bars3Icon,
+  XMarkIcon,
+  MagnifyingGlassIcon,
+} from "@heroicons/react/24/outline";
 const MobileNavigation = ({ navLists }) => {
   const [open, cycleOpen] = useCycle(false, true);
   const sideVariants = {

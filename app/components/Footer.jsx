@@ -24,8 +24,8 @@ const Footer = () => {
           <article className="space-y-3">
             <h6 className="text-xl font-medium font-title">Follow us on</h6>
             <div className="flex items-center gap-x-3">
-              {acpSocial.data.map((social) => (
-                <a href={social.url} target="_blank">
+              {acpSocial.data.map((social, index) => (
+                <a href={social.url} target="_blank" key={index}>
                   <Image
                     priority
                     src={social.icon}

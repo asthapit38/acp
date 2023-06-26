@@ -2,7 +2,7 @@ const AboutEstablishment = () => {
   return (
     <article className="space-y-4" id="about-establishment">
       <p className="text-2xl font-bold leading-relaxed tracking-wider text-primary font-title">
-        The Growth
+        The Establishment
       </p>
       <div className="font-light leading-loose space-y-5">
         <p>

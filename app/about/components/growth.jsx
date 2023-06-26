@@ -2,7 +2,7 @@ const AboutGrowth = () => {
   return (
     <article className="space-y-4" id="about-growth">
       <p className="text-2xl font-bold leading-relaxed tracking-wider text-primary font-title">
-        Producer Benefits
+        The Growth
       </p>
       <div className="font-light leading-loose ">
         <p>

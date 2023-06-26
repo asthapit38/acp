@@ -2,17 +2,17 @@
   "data": [
     {
       "media": "facebook",
-      "icon": "images/icons/facebook.svg",
+      "icon": "/images/icons/facebook.svg",
       "url": "https://www.facebook.com/ACPNepal"
     },
     {
       "media": "instagram",
-      "icon": "images/icons/instagram.svg",
+      "icon": "/images/icons/instagram.svg",
       "url": "https://www.instagram.com/acp_dhukuti/"
     },
     {
       "media": "pinterest",
-      "icon": "images/icons/pinterest.svg",
+      "icon": "/images/icons/pinterest.svg",
       "url": "https://www.pinterest.com/ACPDhukuti/"
     }
   ]

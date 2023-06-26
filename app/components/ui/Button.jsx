@@ -1,7 +1,7 @@
 import { cva } from "class-variance-authority";
 
 const ButtonVariants = cva(
-  "relative uppercase tracking-widest font-medium border border-1 bg-transparent transition-colors before:absolute before:top-0 before:-z-10 before:h-full before:w-full before:transition-transform before:duration-300 before:content-[''] before:hover:scale-x-100 before:scale-x-0 ",
+  "relative uppercase tracking-widest font-medium border border-1 transition-colors before:absolute before:top-0 before:-z-10 before:h-full before:w-full before:transition-transform before:duration-300 before:content-[''] before:hover:scale-x-100 before:scale-x-0 ",
   {
     variants: {
       direction: {
@@ -9,10 +9,11 @@ const ButtonVariants = cva(
         right: "before:right-0 before:origin-top-right ",
       },
       intent: {
+        active: "text-white bg-primary border-none",
         primary:
-          "text-background hover:border-primary before:bg-primary hover:text-white border-background ",
+          "bg-transparent text-background hover:border-primary before:bg-primary hover:text-white border-background ",
         secondary:
-          "text-primary hover:border-black before:bg-black hover:text-background border-primary",
+          "text-primary bg-transparent hover:border-black before:bg-black hover:text-background border-primary",
       },
       width: {
         full: "w-full",
@@ -32,12 +33,23 @@ const ButtonVariants = cva(
     },
   }
 );
-const Button = ({ intent, size, direction, onPress, width, children }) => {
+
+const mergeClasses = (classesArray) => classesArray.filter(Boolean).join(" ");
+
+const Button = ({
+  intent,
+  size,
+  direction,
+  onPress,
+  width,
+  className,
+  children,
+}) => {
+  const buttonClasses = ButtonVariants({ intent, size, direction, width });
+  const mergedClasses = mergeClasses([buttonClasses, className]);
+
   return (
-    <button
-      className={ButtonVariants({ intent, size, direction, width })}
-      onClick={onPress}
-    >
+    <button className={mergedClasses} onClick={onPress}>
       {children}
     </button>
   );

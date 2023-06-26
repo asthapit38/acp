@@ -2,7 +2,7 @@ import Banner from "@/app/components/ui/Banner";
 import Container from "@/app/components/ui/Container";
 import AboutSkill from "./components/skill";
 import AboutFairTradePriciple from "./components/fairTradePrinciple";
-import AboutCommitments from "./components/commitmentsEfficiency";
+import AboutCommitments from "./components/commitments";
 import AboutImpact from "./components/impact";
 import AboutGrowth from "./components/growth";
 import AboutEstablishment from "./components/establishment";

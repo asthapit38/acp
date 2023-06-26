@@ -5,29 +5,59 @@ import { ChevronDownIcon } from "@heroicons/react/24/outline";
 import Link from "next/link";
 import { fetchDataFromApi } from "@/utils/api";
 
-const ProductNavList = () => {
+const AboutNavList = () => {
   const [open, setOpen] = useState(false);
-  const [categories, setCategories] = useState(null);
 
   const closeList = (event) => {
     event.stopPropagation();
     console.log("namaste");
     setOpen(false);
   };
-  const getCategories = async () => {
-    const { data } = await fetchDataFromApi(
-      "/api/categories?select=['name,slug']"
-    );
-    setCategories(data);
-  };
-  useEffect(() => {
-    getCategories();
-  }, []);
+
+  const lists = [
+    {
+      name: "Mission",
+      url: "#about-mission",
+    },
+    {
+      name: "The Growth",
+      url: "#about-establishment",
+    },
+    {
+      name: "The Impact",
+      url: "#about-impact",
+    },
+    {
+      name: "Skill Categories",
+      url: "#about-skill",
+    },
+    {
+      name: "Commitment to Fair Trade",
+      url: "#about-commitment",
+    },
+    {
+      name: "Fair Trade Principles",
+      url: "#about-fair-trade",
+    },
+    {
+      name: "Commitment to Efficiency, Quality and Innovation",
+      url: "#about-commitment-efficiency",
+    },
+    {
+      name: "Respect for the Environment",
+      url: "#about-respect",
+    },
+    {
+      name: "Affiliations",
+      url: "#about-affiliations",
+    },
+  ];
+
   return (
     <li className="font-normal" onClick={() => setOpen((pv) => !pv)}>
       <motion.div animate={open ? "open" : "closed"} className="relative">
         <button className="flex items-center gap-2">
-          <span>Products</span>
+          <span>About Us</span>
           <motion.span variants={iconVariants}>
             <ChevronDownIcon className="w-4 h-4" />
           </motion.span>
@@ -46,28 +76,27 @@ const ProductNavList = () => {
           style={{ originY: "top" }}
           className="absolute max-h-[400px] overflow-y-scroll z-50 flex flex-col gap-2 p-2 bg-white rounded-lg shadow-xl w-72 min-w-fit"
         >
-          {categories &&
-            categories.map((category) => (
-              <Option
-                setOpen={setOpen}
-                text={category.attributes.name}
-                slug={category.attributes.slug}
-                key={category.id}
-              />
-            ))}
+          {lists.map((about, index) => (
+            <Option
+              setOpen={setOpen}
+              text={about.name}
+              key={index}
+              url={about.url}
+            />
+          ))}
         </motion.ul>
       </motion.div>
     </li>
   );
 };
 
-const Option = ({ text, slug }) => {
+const Option = ({ text, url }) => {
   return (
     <motion.li
       variants={itemVariants}
       className="flex items-center w-full gap-2 p-2 font-medium transition-colors ease-linear rounded-lg hover:bg-primary/30"
     >
-      <Link href={`/categories/${slug}`}>
+      <Link href={`/about/${url}`}>
         <span className="capitalize">{text}</span>
       </Link>
     </motion.li>
@@ -114,4 +143,4 @@ const itemVariants = {
   },
 };
 
-export default ProductNavList;
+export default AboutNavList;

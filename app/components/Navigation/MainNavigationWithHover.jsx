@@ -2,6 +2,7 @@ import { MagnifyingGlassIcon } from "@heroicons/react/24/outline";
 import Link from "next/link";
 import ProductNavList from "./ProductNavList";
 import MobileNavigation from "./MobileNavigation";
+import AboutNavList from "./AboutNavList";
 
 const MainNavigationWithHover = async () => {
   const homeLink = {
@@ -9,10 +10,6 @@ const MainNavigationWithHover = async () => {
     url: "/",
   };
   const navLists = [
-    {
-      name: "About Us",
-      url: "/about",
-    },
     {
       name: "Journal",
       url: "/our-journal",
@@ -35,6 +32,7 @@ const MainNavigationWithHover = async () => {
             <Link href={homeLink.url}>{homeLink.name}</Link>
           </li>
           <ProductNavList />
+          <AboutNavList />
           {navLists.map((list, index) => (
             <li
               className="relative font-normal transition duration-200 ease-linear hover:text-primary"
