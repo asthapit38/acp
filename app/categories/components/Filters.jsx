@@ -1,3 +1,5 @@
+"use client";
+
 import Button from "@/app/components/ui/Button";
 import { fetchDataFromApi } from "@/utils/api";
 import { useEffect } from "react";
