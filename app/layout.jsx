@@ -1,5 +1,5 @@
 "use client";
-import { delay, motion } from "framer-motion";
+import { motion } from "framer-motion";
 import Navigation from "@/app/components/Navigation/NavigationWrapper";
 import "./globals.css";
 import Footer from "@/app/components/Footer";

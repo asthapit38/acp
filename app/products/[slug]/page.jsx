@@ -1,6 +1,5 @@
 import ProductSlider from "@/app/components/Partials/Landing/new-product/ProductSlider";
 import Heading from "@/app/components/ui/Heading/Heading";
-import Link from "next/link";
 export default function ProductDetail() {
   return (
     <div className="max-w-5xl px-4 mx-auto mt-4 xl:px-0 ">

@@ -12,9 +12,45 @@ import AboutLocation from "./components/locations";
 import AboutRespect from "./components/respect";
 import AboutAffiliations from "./components/affilations";
 import AboutIntro from "./components/intro";
+import Link from "next/link";
+
+export const metadata = {
+  title: "About | ACP",
+  description: `The Association for Craft Producers (ACP) is a Fair Trade Organization based in Nepal, dedicated to empowering low-income artisans. Through design, marketing, and technical services, ACP combines traditional craft with contemporary design, fostering creative collaboration. ACP offers a flexible program, supporting artisans while prioritizing their welfare and environmental conservation. Experience the unique craftsmanship and sustainable initiatives of ACP in Nepal.`,
+};
 
 export default function About() {
   const title = "Discover Our Story: Who We Are and What We Stand For";
+  const lists = [
+    {
+      name: "Mission",
+      url: "#about-mission",
+    },
+    {
+      name: "The Growth",
+      url: "#about-establishment",
+    },
+    {
+      name: "The Impact",
+      url: "#about-impact",
+    },
+    {
+      name: "Skill Categories",
+      url: "#about-skill",
+    },
+    {
+      name: "Commitment to Fair Trade",
+      url: "#about-commitment",
+    },
+    {
+      name: "Fair Trade Principles",
+      url: "#about-fair-trade",
+    },
+    {
+      name: "Affiliations",
+      url: "#about-affiliations",
+    },
+  ];
   return (
     <>
       <Banner title={title} image="/images/about-banner.JPG">
@@ -25,17 +61,35 @@ export default function About() {
         </div>
       </Banner>
       <Container>
-        <AboutIntro />
-        <AboutMission />
-        <AboutEstablishment />
-        <AboutGrowth />
-        <AboutImpact />
-        <AboutSkill />
-        <AboutCommitments />
-        <AboutFairTradePriciple />
-        <AboutCommitmentsEfficiency />
-        <AboutRespect />
-        <AboutAffiliations />
+        <div className="flex gap-x-4">
+          <div className="w-3/4 max-w-3xl space-y-2">
+            <AboutIntro />
+            <AboutMission />
+            <AboutEstablishment />
+            <AboutGrowth />
+            <AboutImpact />
+            <AboutSkill />
+            <AboutCommitments />
+            <AboutFairTradePriciple />
+            <AboutCommitmentsEfficiency />
+            <AboutRespect />
+            <AboutAffiliations />
+          </div>
+          <div className="w-1/4">
+            <div className="sticky w-full h-auto overflow-hidden border rounded top-8">
+              <ul className="flex flex-col">
+                {lists.map((list) => (
+                  <Link
+                    href={`/about/${list.url}`}
+                    className="p-2 border-b last:border-none hover:bg-primary/40"
+                  >
+                    {list.name}
+                  </Link>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </div>
         <AboutLocation />
       </Container>
     </>

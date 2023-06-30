@@ -10,7 +10,6 @@ const AboutNavList = () => {
 
   const closeList = (event) => {
     event.stopPropagation();
-    console.log("namaste");
     setOpen(false);
   };
 
@@ -40,35 +39,31 @@ const AboutNavList = () => {
       url: "#about-fair-trade",
     },
     {
-      name: "Commitment to Efficiency, Quality and Innovation",
-      url: "#about-commitment-efficiency",
-    },
-    {
-      name: "Respect for the Environment",
-      url: "#about-respect",
-    },
-    {
       name: "Affiliations",
       url: "#about-affiliations",
     },
   ];
 
   return (
-    <li className="font-normal" onClick={() => setOpen((pv) => !pv)}>
+    <li
+      className="font-normal"
+      onMouseLeave={() => setOpen(false)}
+      onMouseEnter={() => setOpen(true)}
+    >
       <motion.div animate={open ? "open" : "closed"} className="relative">
-        <button className="flex items-center gap-2">
+        <Link href="/about" className="flex items-center gap-2">
           <span>About Us</span>
           <motion.span variants={iconVariants}>
             <ChevronDownIcon className="w-4 h-4" />
           </motion.span>
-        </button>
-        {open && (
+        </Link>
+        {/* {open && (
           <div
             tabIndex="-1"
             className="fixed inset-0 z-20 w-full h-screen"
             onClick={closeList}
           ></div>
-        )}
+        )} */}
 
         <motion.ul
           initial={wrapperVariants.closed}
