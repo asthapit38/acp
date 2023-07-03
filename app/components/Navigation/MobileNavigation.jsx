@@ -5,6 +5,7 @@ import {
   XMarkIcon,
   MagnifyingGlassIcon,
 } from "@heroicons/react/24/outline";
+import AboutNavList from "./AboutNavList";
 const MobileNavigation = ({ navLists }) => {
   const [open, cycleOpen] = useCycle(false, true);
   const sideVariants = {
@@ -56,6 +57,28 @@ const MobileNavigation = ({ navLists }) => {
               className="z-50 flex flex-col items-center justify-between w-full gap-4 p-8 overflow-y-scroll"
             >
               <div className="flex flex-col items-center flex-grow gap-6">
+                <motion.a
+                  variants={itemVariants}
+                  href="/"
+                  className="text-xl font-normal transition duration-200 ease-linear hover:text-primary hover:font-bold"
+                >
+                  {" "}
+                  Home{" "}
+                </motion.a>
+                <motion.a
+                  variants={itemVariants}
+                  href="/about"
+                  className="text-xl font-normal transition duration-200 ease-linear hover:text-primary hover:font-bold"
+                >
+                  About
+                </motion.a>
+                <motion.a
+                  variants={itemVariants}
+                  href="/product"
+                  className="text-xl font-normal transition duration-200 ease-linear hover:text-primary hover:font-bold"
+                >
+                  Products
+                </motion.a>
                 {navLists.map((list, index) => (
                   <motion.a
                     variants={itemVariants}

@@ -39,7 +39,7 @@ const AboutFairTradePriciple = () => {
         Fair Trade Principles
       </p>
       <div className="space-y-5">
-        <ul class="space-y-1 list-disc list-inside font-light leading-loose">
+        <ul className="space-y-1 font-light leading-loose list-disc list-inside">
           {principles.map((principle, index) => (
             <li key={index}>{principle}</li>
           ))}
@@ -49,11 +49,11 @@ const AboutFairTradePriciple = () => {
           Besides direct remuneration, ACP has the following financial and
           non-financial benefit programs for staff and producers.
         </p>
-        <ul class="font-light leading-loose grid grid-cols-2 gap-y-1.5 gap-x-6">
+        <ul className="font-light leading-loose grid grid-cols-2 gap-y-1.5 gap-x-6">
           {benefits.map((benefit, index) => (
             <li
               key={index}
-              className="border border-primary/20 px-3 py-1 rounded-lg"
+              className="px-3 py-1 border rounded-lg border-primary/20"
             >
               {benefit}
             </li>

@@ -53,7 +53,7 @@ export default function About() {
   ];
   return (
     <>
-      <Banner title={title} image="/images/about-banner.JPG">
+      <Banner title={title} image="/images/hero-banner.JPG">
         <div className="relative z-20 flex flex-col items-center justify-center h-full max-w-5xl px-4 mx-auto xl:px-0">
           <h3 className="text-4xl font-bold leading-normal text-background font-title">
             {title}
@@ -61,8 +61,8 @@ export default function About() {
         </div>
       </Banner>
       <Container>
-        <div className="flex gap-x-4">
-          <div className="w-3/4 max-w-3xl space-y-2">
+        <div className="flex flex-col-reverse lg:flex-row gap-x-4">
+          <div className="w-full space-y-2 lg:w-3/4">
             <AboutIntro />
             <AboutMission />
             <AboutEstablishment />
@@ -75,7 +75,7 @@ export default function About() {
             <AboutRespect />
             <AboutAffiliations />
           </div>
-          <div className="w-1/4">
+          <div className="hidden w-full lg:w-1/4 lg:block">
             <div className="sticky w-full h-auto overflow-hidden border rounded top-8">
               <ul className="flex flex-col">
                 {lists.map((list) => (

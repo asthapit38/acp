@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Button from "@/app/components/ui/Button";
+import Link from "next/link";
 // import Reveal from "../../ui/Reveal";
 
 const Hero = () => {
@@ -8,7 +9,7 @@ const Hero = () => {
       <div className="absolute inset-0 w-full h-full overflow-hidden -z-10">
         <Image
           priority
-          src="/images/hero-banner.JPG"
+          src="/images/about-banner.JPG"
           fill
           sizes="width: 100%"
           style={{
@@ -31,7 +32,10 @@ const Hero = () => {
           various benefits and programs for their producers' welfare and
           conservation of the environment.
         </p>
-        <Button>Learn More </Button>
+
+        <Link href="/about">
+          <Button>Learn More</Button>
+        </Link>
       </div>
       {/* </Reveal> */}
     </div>

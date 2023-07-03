@@ -4,7 +4,7 @@ const AboutEstablishment = () => {
       <p className="text-2xl font-bold leading-relaxed tracking-wider text-primary font-title">
         The Establishment
       </p>
-      <div className="font-light leading-loose space-y-5">
+      <div className="space-y-5 font-light leading-loose">
         <p>
           Ms. Meera Bhattarai founded ACP to socially and economically empower
           low-income artisans primarily women. Often, craft producers of Nepal
@@ -22,10 +22,10 @@ const AboutEstablishment = () => {
           provide integrated support to the craft workers as well as be
           self-sufficient. As a result, ACP was founded.
         </p>
-        <blockquote class="italic font-semibold">
+        <blockquote className="italic font-semibold">
           <svg
             aria-hidden="true"
-            class="w-8 h-8 text-primary"
+            className="w-8 h-8 text-primary"
             viewBox="0 0 24 27"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"

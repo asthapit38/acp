@@ -2,22 +2,18 @@ import Banner from "@/app/components/ui/Banner";
 import OurJournalImage from "@/public/images/our-journal.jpeg";
 import BlogCard from "@/app/components/ui/BlogCard";
 import Container from "../components/ui/Container";
+import { fetchDataFromApi } from "@/utils/api";
+export const metadata = {
+  title: "Our Journal | ACP",
+  description: `The Association for Craft Producers (ACP) is a Fair Trade Organization based in Nepal, dedicated to empowering low-income artisans. Through design, marketing, and technical services, ACP combines traditional craft with contemporary design, fostering creative collaboration. ACP offers a flexible program, supporting artisans while prioritizing their welfare and environmental conservation. Experience the unique craftsmanship and sustainable initiatives of ACP in Nepal.`,
+};
+const getJournals = async () => {
+  const { data } = await fetchDataFromApi("/api/blogs?populate=image");
+  return data;
+};
 
-export default function OurJournal() {
-  const blogs = [
-    {
-      title: "NGO Supporting Women",
-      date: "23 Feb, 2023",
-    },
-    {
-      title: "Styling Ideas for a Sustainable Kitchen Pantry",
-      date: "23 Feb, 2023",
-    },
-    {
-      title: "Create a Calming Bedroom Sanctuary",
-      date: "23 Feb, 2023",
-    },
-  ];
+export default async function OurJournal() {
+  const blogs = await getJournals();
   const title = "Our Journals";
   return (
     <>
@@ -36,9 +32,17 @@ export default function OurJournal() {
           place for you.
         </p>
         <div className="grid justify-start grid-cols-1 gap-6 lg:grid-cols-3">
-          {blogs.map((blog, index) => (
-            <BlogCard title={blog.title} date={blog.date} key={index} />
-          ))}
+          {blogs.map(
+            (blog) =>
+              blog.attributes.image && (
+                <BlogCard
+                  title={blog.attributes.name}
+                  date={blog.attributes.createdAt}
+                  key={blog.id}
+                  imageUrl={blog.attributes.image}
+                />
+              )
+          )}
         </div>
       </Container>
     </>

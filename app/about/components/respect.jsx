@@ -16,14 +16,14 @@ const AboutRespect = () => {
       <p className="text-2xl font-bold leading-relaxed tracking-wider text-primary font-title">
         Respect for the Environment
       </p>
-      <div className="font-light leading-loose space-y-5">
+      <div className="space-y-5 font-light leading-loose">
         <p>
           For the preservation of the environment, ACP has taken various
           measures outlined below. ACP was also been recognized by the Kathmandu
           Metropolitian for the precautionary measures undertaken to prevent
           industrial pollution.
         </p>
-        <ul class="space-y-1 list-disc list-inside font-light leading-loose">
+        <ul className="space-y-1 font-light leading-loose list-disc list-inside">
           {environmental_initiatives.map((data, index) => (
             <li key={index}>{data}</li>
           ))}
