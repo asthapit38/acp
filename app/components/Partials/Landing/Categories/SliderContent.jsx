@@ -64,7 +64,7 @@ export default function CategorySlider({ categories }) {
                 {slide.attributes.image.data && (
                   <Image
                     fill
-                    src={`${API_URL}${slide.attributes.image.data.attributes.formats.small.url}`}
+                    src={`${API_URL}${slide.attributes.image.data.attributes.formats.medium.url}`}
                     style={{
                       objectFit: "cover",
                     }}
