@@ -15,7 +15,7 @@ export default async function Home() {
     <main>
       <Hero />
       <div className="flex flex-col max-w-5xl px-4 mx-auto mt-6 xl:px-0 gap-y-16">
-        {/* <Categories /> */}
+        <Categories />
         <DiscoverAcp />
       </div>
       <EventWrapper />
