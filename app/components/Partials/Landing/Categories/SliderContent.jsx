@@ -41,14 +41,17 @@ export default function CategorySlider({ categories }) {
       <Swiper
         ref={sliderRef}
         spaceBetween={16}
-        slidesPerView={2.5}
         breakpoints={{
+          400: {
+            slidesPerView: 1.5,
+            spaceBetween: 16,
+          },
           640: {
-            slidesPerView: 1.25,
+            slidesPerView: 1.75,
             spaceBetween: 16,
           },
           768: {
-            slidesPerView: 1.5,
+            slidesPerView: 2.25,
             spaceBetween: 16,
           },
           1024: {
@@ -57,38 +60,39 @@ export default function CategorySlider({ categories }) {
           },
         }}
       >
-        {categories.map((slide, index) => (
-          <SwiperSlide key={index}>
-            <div className="relative w-full">
-              <div className="relative w-full aspect-square">
-                {slide.attributes.image.data && (
-                  <Image
-                    fill
-                    src={`${API_URL}${slide.attributes.image.data.attributes.formats.medium.url}`}
-                    style={{
-                      objectFit: "cover",
-                    }}
-                    alt="categories image"
-                  />
-                )}
-              </div>
-              <div className="absolute bottom-0 w-full text-center text-white h-1/2 bg-gradient-to-t from-black to-transparent">
-                <div className="relative z-20 flex flex-col items-center justify-end h-full gap-2 pb-8">
-                  <p className="text-xl font-bold leading-normal tracking-wider capitalize font-title">
-                    {slide.attributes.name}
-                  </p>
-                  <Link
-                    href={`/categories/${slide.attributes.slug}`}
-                    passHref
-                    legacyBehavior
-                  >
-                    <ViewButton />
-                  </Link>
+        {categories &&
+          categories.map((slide, index) => (
+            <SwiperSlide key={index}>
+              <div className="relative w-full">
+                <div className="relative w-full aspect-square">
+                  {slide.attributes.image.data && (
+                    <Image
+                      fill
+                      src={`${API_URL}${slide.attributes.image.data.attributes.formats.medium.url}`}
+                      style={{
+                        objectFit: "cover",
+                      }}
+                      alt="categories image"
+                    />
+                  )}
+                </div>
+                <div className="absolute bottom-0 w-full text-center text-white h-1/2 bg-gradient-to-t from-black to-transparent">
+                  <div className="relative z-20 flex flex-col items-center justify-end h-full gap-2 pb-8">
+                    <p className="text-xl font-bold leading-normal tracking-wider capitalize font-title">
+                      {slide.attributes.name}
+                    </p>
+                    <Link
+                      href={`/categories/${slide.attributes.slug}`}
+                      passHref
+                      legacyBehavior
+                    >
+                      <ViewButton />
+                    </Link>
+                  </div>
                 </div>
               </div>
-            </div>
-          </SwiperSlide>
-        ))}
+            </SwiperSlide>
+          ))}
       </Swiper>
     </div>
   );

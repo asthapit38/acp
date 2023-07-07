@@ -74,7 +74,7 @@ const MobileNavigation = ({ navLists }) => {
                 </motion.a>
                 <motion.a
                   variants={itemVariants}
-                  href="/product"
+                  href="/products"
                   className="text-xl font-normal transition duration-200 ease-linear hover:text-primary hover:font-bold"
                 >
                   Products

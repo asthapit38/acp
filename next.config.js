@@ -6,8 +6,8 @@ const nextConfig = {
   images: {
     remotePatterns: [
       {
-        protocol: "https",
-        hostname: "acp-backend.onrender.com",
+        protocol: "http",
+        hostname: "127.0.0.1",
         port: "1337",
         pathname: "**",
       },
