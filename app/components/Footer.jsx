@@ -8,13 +8,13 @@ const Footer = () => {
         <div className="grid grid-cols-1 gap-6 lg:grid-cols-3">
           <article className="space-y-3">
             <h6 className="text-xl font-medium font-title">Connect</h6>
-            <p className="text-[#000]">
+            <p>
               <span className="block">Association for Craft Producers </span>
               <span className="block">GPO Box 3701 </span>
               <span className="block">Ravi Bhawan Mode</span>
               <span className="block">Kathmandu, Nepal</span>
             </p>
-            <p className="text-[#000]">
+            <p>
               <span className="block">
                 Office: +977-1-5388705, 5234616, 5370721
               </span>
