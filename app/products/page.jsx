@@ -2,6 +2,10 @@ import Link from "next/link";
 import CategoriesAccordion from "../components/Partials/ProductShowCase/CategoriesAccordion";
 import ProductCard from "../components/ui/ProductCard";
 import CategoriesData from "@/data/categories.json";
+export const metadata = {
+  title: "All Products | ACP",
+  description: `ACP expanded its range of products by introducing contemporary designs to meet market demands while also ensuring that the community's skills were preserved. Each product is meticulously crafted using simple tools, showcasing the exceptional artistry and skill of our talented artisans.`,
+};
 export default async function Products() {
   return (
     <div className="max-w-5xl px-4 mx-auto mt-6 lg:px-0">

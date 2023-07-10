@@ -5,7 +5,7 @@ import { API_URL } from "@/utils/urls";
 const getCategory = async (slug) => {
   try {
     const { data } = await fetchDataFromApi(
-      `/api/categories?filters[slug]=${slug}&populate=items,subcategories,image`
+      `/api/categories?filters[slug]=${slug}&populate=image,items,subcategories`
     );
     return data;
   } catch (error) {
@@ -37,16 +37,18 @@ export default async function Page({ params }) {
           </p>
         </div>
         <div className="hidden w-full overflow-hidden bg-gray-400 rounded-lg aspect-video lg:block">
-          <Image
-            width="0"
-            height="0"
-            sizes="100vw"
-            className="w-full h-auto"
-            style={{
-              objectFit: "cover",
-            }}
-            src={`${API_URL}${category[0].attributes.image.data.attributes.formats.medium.url}`}
-          />
+          {category[0].attributes.image.data && (
+            <Image
+              width="0"
+              height="0"
+              sizes="100vw"
+              className="w-full h-auto"
+              style={{
+                objectFit: "cover",
+              }}
+              src={`${API_URL}${category[0].attributes.image.data.attributes.formats.medium.url}`}
+            />
+          )}
         </div>
       </div>
       <FilteredProduct subCategories={subCategories} products={products} />

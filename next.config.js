@@ -5,13 +5,21 @@ const nextConfig = {
   },
   images: {
     remotePatterns: [
+      // production
       {
-        protocol: "http",
-        hostname: "127.0.0.1",
-        port: "1337",
+        protocol: "https",
+        hostname: "acp-backend.onrender.com",
+        port: "*",
         pathname: "**",
       },
+      // {
+      //   protocol: "http",
+      //   hostname: "127.0.0.1",
+      //   port: "*",
+      //   pathname: "**",
+      // },
     ],
+    domains: ["acp-backend.onrender.com", "127.0.0.1"],
   },
 };
 
