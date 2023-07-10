@@ -1,10 +1,10 @@
 const AboutCommitmentsEfficiency = () => {
   return (
-    <article className="space-y-4" id="about-commitment-efficiency">
-      <p className="text-2xl font-bold leading-relaxed tracking-wider text-primary font-title">
+    <article className="space-y-5" id="about-commitment-efficiency">
+      <p className="font-bold">
         Commitment to Efficiency, Quality and Innovation
       </p>
-      <div className="font-light leading-loose space-y-5">
+      <div className="text-[#000] leading-loose space-y-5">
         <p>
           ACP operates business with full accountability and is highly committed
           to give the best to its buyers. We believe in long term partnership

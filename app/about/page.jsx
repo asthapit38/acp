@@ -7,9 +7,7 @@ import AboutImpact from "./components/impact";
 import AboutGrowth from "./components/growth";
 import AboutEstablishment from "./components/establishment";
 import AboutMission from "./components/mission";
-import AboutCommitmentsEfficiency from "./components/commitmentsEfficiency";
 import AboutLocation from "./components/locations";
-import AboutRespect from "./components/respect";
 import AboutAffiliations from "./components/affilations";
 import AboutIntro from "./components/intro";
 import Link from "next/link";
@@ -62,7 +60,7 @@ export default function About() {
       </Banner>
       <Container>
         <div className="flex flex-col-reverse lg:flex-row gap-x-4">
-          <div className="w-full space-y-2 lg:w-3/4">
+          <div className="w-full space-y-2.5 lg:w-3/4">
             <AboutIntro />
             <AboutMission />
             <AboutEstablishment />
@@ -71,8 +69,6 @@ export default function About() {
             <AboutSkill />
             <AboutCommitments />
             <AboutFairTradePriciple />
-            <AboutCommitmentsEfficiency />
-            <AboutRespect />
             <AboutAffiliations />
           </div>
           <div className="hidden w-full lg:w-1/4 lg:block">

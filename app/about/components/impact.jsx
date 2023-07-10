@@ -4,7 +4,7 @@ const AboutImpact = () => {
       <p className="text-2xl font-bold leading-relaxed tracking-wider text-primary font-title">
         The Impact
       </p>
-      <p className="font-light leading-loose">
+      <p className="text-[#000] leading-loose">
         ACP has transformed the lives of artisans, mainly women from a position
         of powerlessness to empowerment, from vulnerability to a higher level of
         economic security. The women have become more confident and have been

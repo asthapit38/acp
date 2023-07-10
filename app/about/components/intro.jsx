@@ -5,7 +5,7 @@ const AboutIntro = () => {
       <p className="text-2xl font-bold leading-relaxed tracking-wider text-primary font-title">
         The Organization - ACP
       </p>
-      <div className="font-light leading-loose space-y-2">
+      <div className="text-[#000] leading-loose space-y-2">
         <p>
           Nepal’s premier craft organization, Association for Craft Producers
           (ACP) has been successfully balancing its social obligations and

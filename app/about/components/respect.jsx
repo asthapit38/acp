@@ -12,18 +12,16 @@ const AboutRespect = () => {
     "Upcycling",
   ];
   return (
-    <article className="space-y-4" id="about-respect">
-      <p className="text-2xl font-bold leading-relaxed tracking-wider text-primary font-title">
-        Respect for the Environment
-      </p>
-      <div className="space-y-5 font-light leading-loose">
+    <article className="space-y-5" id="about-respect">
+      <p className="font-bold">Respect for the Environment</p>
+      <div className="space-y-5 text-[#000] leading-loose">
         <p>
           For the preservation of the environment, ACP has taken various
           measures outlined below. ACP was also been recognized by the Kathmandu
           Metropolitian for the precautionary measures undertaken to prevent
           industrial pollution.
         </p>
-        <ul className="space-y-1 font-light leading-loose list-disc list-inside">
+        <ul className="space-y-1 text-[#000] leading-loose list-disc list-inside">
           {environmental_initiatives.map((data, index) => (
             <li key={index}>{data}</li>
           ))}

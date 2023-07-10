@@ -4,7 +4,7 @@ const AboutGrowth = () => {
       <p className="text-2xl font-bold leading-relaxed tracking-wider text-primary font-title">
         The Growth
       </p>
-      <div className="font-light leading-loose ">
+      <div className="text-[#000] leading-loose ">
         <p>
           ACP started its life with just 38 producers and 5 full time staff in a
           rented building with 4000 sq. ft area in three skill categories with

@@ -25,7 +25,7 @@ export default async function OurJournal() {
         </div>
       </Banner>
       <Container>
-        <p className="font-light leading-loose text-center">
+        <p className="text-[#000] leading-loose text-center">
           We've carved out a quiet corner where you can delve into sustainable
           home design inspiration and seasonal styling tips. For those seeking
           to live in a way that is considered, kind and conscious, this is the

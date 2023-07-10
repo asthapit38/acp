@@ -6,7 +6,7 @@ export default function Dhukuti() {
     <div className="max-w-5xl px-4 mx-auto mt-6 space-y-8 lg:px-0">
       <div className="flex items-center justify-center">
         <Image
-          src="/images/logos/dhukuti-logo.png"
+          src="/images/logos/dhukuti-logo.svg"
           width={450}
           height={120}
           style={{
@@ -16,7 +16,7 @@ export default function Dhukuti() {
           alt="Our Dhukuti"
         />
       </div>
-      <p className="font-light leading-loose">
+      <p className="leading-loose text-[#000]">
         Dhukuti is our three-story treasure trove, located in Kupondole,
         Lalitpur. It displays our entire line of handmade products. The
         individual customer can browse, touch, shop and learn about our process

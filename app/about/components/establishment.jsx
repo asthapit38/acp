@@ -4,7 +4,7 @@ const AboutEstablishment = () => {
       <p className="text-2xl font-bold leading-relaxed tracking-wider text-primary font-title">
         The Establishment
       </p>
-      <div className="space-y-5 font-light leading-loose">
+      <div className="space-y-5 text-[#000] leading-loose">
         <p>
           Ms. Meera Bhattarai founded ACP to socially and economically empower
           low-income artisans primarily women. Often, craft producers of Nepal

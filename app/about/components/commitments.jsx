@@ -4,7 +4,7 @@ const AboutCommitments = () => {
       <p className="text-2xl font-bold leading-relaxed tracking-wider text-primary font-title">
         Commitment to Fair Trade
       </p>
-      <div className="font-light leading-loose space-y-5">
+      <div className="text-[#000] leading-loose space-y-5">
         <p>
           From the inception, ACP adhered to values of fairness and long-term
           sustainability. At the core of the operations is the economic
