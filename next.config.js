@@ -8,7 +8,7 @@ const nextConfig = {
       // production
       {
         protocol: "https",
-        hostname: "acp-backend.onrender.com",
+        hostname: "res.cloudinary.com",
         port: "*",
         pathname: "**",
       },
@@ -19,7 +19,7 @@ const nextConfig = {
       //   pathname: "**",
       // },
     ],
-    domains: ["acp-backend.onrender.com", "127.0.0.1"],
+    domains: ["acp-backend.onrender.com", "127.0.0.1", "res.cloudinary.com"],
   },
 };
 

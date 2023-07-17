@@ -4,7 +4,7 @@ const HeadingContainer = ({ title, children }) => {
   return (
     <section>
       <Heading>{title}</Heading>
-      <p className="text-center text-gray-500">{children}</p>
+      <p className="text-center">{children}</p>
     </section>
   );
 };

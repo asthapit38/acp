@@ -17,6 +17,7 @@ const ViewButton = React.forwardRef(({ onClick, href }, ref) => {
 });
 
 export default function CategorySlider({ categories }) {
+  console.log(categories);
   const sliderRef = useRef(null);
   const handlePrev = useCallback(() => {
     if (!sliderRef.current) return;
@@ -65,10 +66,10 @@ export default function CategorySlider({ categories }) {
             <SwiperSlide key={index}>
               <div className="relative w-full">
                 <div className="relative w-full aspect-square">
-                  {slide.attributes.image.data && (
+                  {slide.attributes.image_url && (
                     <Image
                       fill
-                      src={`${API_URL}${slide.attributes.image.data.attributes.formats.medium.url}`}
+                      src={`${slide.attributes.image_url}`}
                       style={{
                         objectFit: "cover",
                       }}

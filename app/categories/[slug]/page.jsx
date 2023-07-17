@@ -37,7 +37,7 @@ export default async function Page({ params }) {
           </p>
         </div>
         <div className="hidden w-full overflow-hidden bg-gray-400 rounded-lg aspect-video lg:block">
-          {category[0].attributes.image.data && (
+          {category[0].attributes.image_url && (
             <Image
               width="0"
               height="0"
@@ -46,7 +46,7 @@ export default async function Page({ params }) {
               style={{
                 objectFit: "cover",
               }}
-              src={`${API_URL}${category[0].attributes.image.data.attributes.formats.medium.url}`}
+              src={`${category[0].attributes.image_url}`}
             />
           )}
         </div>

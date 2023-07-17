@@ -27,7 +27,7 @@ export default async function Page({ params }) {
 
   return (
     <>
-      <Banner title={title} image={`${API_URL}${imageUrl}`}>
+      <Banner title={title} image={`${imageUrl}`}>
         <div className="relative z-20 flex flex-col items-center justify-center h-full max-w-5xl px-4 mx-auto xl:px-0">
           <h3 className="text-4xl font-bold leading-normal text-center text-background font-title">
             {title}

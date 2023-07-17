@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { ChevronDownIcon } from "@heroicons/react/24/outline";
 import Link from "next/link";
-import { fetchDataFromApi } from "@/utils/api";
+import { API_URL } from "@/utils/urls";
 
 const ProductNavList = () => {
   const [open, setOpen] = useState(false);
@@ -11,13 +11,17 @@ const ProductNavList = () => {
 
   const closeList = (event) => {
     event.stopPropagation();
-    console.log("namaste");
     setOpen(false);
   };
   const getCategories = async () => {
-    const { data } = await fetchDataFromApi(
-      "/api/categories?select=['name,slug']"
+    const options = {
+      method: "GET",
+    };
+    const { data } = await fetch(
+      `https://acp-backend.onrender.com/api/categories`,
+      options
     );
+    console.log(data);
     setCategories(data);
   };
   useEffect(() => {
