@@ -3,8 +3,15 @@ import Link from "next/link";
 import ProductNavList from "./ProductNavList";
 import MobileNavigation from "./MobileNavigation";
 import AboutNavList from "./AboutNavList";
+import { fetchDataFromApi } from "@/utils/api";
+
+const getData = async () => {
+  const { data } = await fetchDataFromApi("/api/categories");
+  return data;
+};
 
 const MainNavigationWithHover = async () => {
+  const data = await getData();
   const homeLink = {
     name: "Home",
     url: "/",
@@ -31,7 +38,7 @@ const MainNavigationWithHover = async () => {
           <li className="relative font-normal transition duration-200 ease-linear hover:text-primary">
             <Link href={homeLink.url}>{homeLink.name}</Link>
           </li>
-          <ProductNavList />
+          <ProductNavList categories={data} />
           <AboutNavList />
           {navLists.map((list, index) => (
             <li

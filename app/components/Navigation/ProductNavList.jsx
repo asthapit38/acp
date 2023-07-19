@@ -3,30 +3,13 @@ import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { ChevronDownIcon } from "@heroicons/react/24/outline";
 import Link from "next/link";
-import { API_URL } from "@/utils/urls";
 
-const ProductNavList = () => {
+const ProductNavList = ({ categories }) => {
   const [open, setOpen] = useState(false);
-  const [categories, setCategories] = useState(null);
-
   const closeList = (event) => {
     event.stopPropagation();
     setOpen(false);
   };
-  const getCategories = async () => {
-    const options = {
-      method: "GET",
-    };
-    const { data } = await fetch(
-      `https://acp-backend.onrender.com/api/categories`,
-      options
-    );
-    console.log(data);
-    setCategories(data);
-  };
-  useEffect(() => {
-    getCategories();
-  }, []);
   return (
     <li className="font-normal" onClick={() => setOpen((pv) => !pv)}>
       <motion.div animate={open ? "open" : "closed"} className="relative">

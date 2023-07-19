@@ -17,7 +17,6 @@ const ViewButton = React.forwardRef(({ onClick, href }, ref) => {
 });
 
 export default function CategorySlider({ categories }) {
-  console.log(categories);
   const sliderRef = useRef(null);
   const handlePrev = useCallback(() => {
     if (!sliderRef.current) return;

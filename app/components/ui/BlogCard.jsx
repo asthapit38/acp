@@ -21,7 +21,7 @@ const BlogCard = ({ title, date, imageUrl, slug }) => {
       >
         {imageUrl.data && (
           <Image
-            src={`${imageUrl.data[0].attributes.formats.medium.url}`}
+            src={`${API_URL}${imageUrl.data[0].attributes.formats.medium.url}`}
             style={{
               objectFit: "cover",
             }}
