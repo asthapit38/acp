@@ -14,7 +14,7 @@ const TopNavigation = () => {
         <img
           src="/images/logos/wtc-acp-g-high.png"
           alt=""
-          className="w-[64px]"
+          className="w-[80px]"
         />
       </Link>
     </div>
