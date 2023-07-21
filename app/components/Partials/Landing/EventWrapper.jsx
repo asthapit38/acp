@@ -2,23 +2,23 @@
 import EventCard from "../../ui/EventCard";
 import { useKeenSlider } from "keen-slider/react";
 import "keen-slider/keen-slider.min.css";
-import EventOne from "@/public/images/event/1.jpeg";
-import EventTwo from "@/public/images/event/2.jpeg";
-import EventThree from "@/public/images/event/3.jpeg";
+import EventOne from "@/public/images/event/event-1.JPG";
+import EventTwo from "@/public/images/event/event-2.JPG";
+import EventThree from "@/public/images/event/event-3.JPG";
 import { useState } from "react";
 
 const images = [
   {
     image: EventOne,
-    title: "Handicrafts and Home Decor Exhibition",
+    title: "Artisan Meet and Greet",
   },
   {
     image: EventTwo,
-    title: "Craft Bazaar",
+    title: "Christmas Craft Markets",
   },
   {
     image: EventThree,
-    title: "Artisan Workshops",
+    title: "Craft Workshops and Demonstrations",
   },
 ];
 const animation = { duration: 5000 * 8, easing: (t) => t };

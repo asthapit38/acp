@@ -10,6 +10,7 @@ export default function EventCard({ image, title }) {
         sizes="width: 100%"
         style={{
           objectFit: "cover",
+          objectPosition: "0px -100px",
         }}
         alt={title}
       />
