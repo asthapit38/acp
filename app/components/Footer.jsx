@@ -41,7 +41,7 @@ const Footer = () => {
             <h6 className="text-xl font-medium font-title">
               Export Processing
             </h6>
-            <Link href="" className="block">
+            <Link href="/terms-condition" className="block">
               Terms & Conditions
             </Link>
           </div>
