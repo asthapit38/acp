@@ -30,10 +30,7 @@ export default async function Page({ params }) {
             {category[0].attributes.name}
           </h1>
           <p className="text-sm text-gray-500">
-            Introducing our new season collections, from statement lighting to
-            stylish rattan garden furniture. Find texture in abundance with
-            handwoven textiles and tactile ceramics, and embrace organic forms
-            and silhouettes through handcrafted and reclaimed decorative objet.
+            {category[0].attributes.brief}
           </p>
         </div>
         <div className="hidden w-full overflow-hidden bg-gray-400 rounded-lg aspect-video lg:block">
