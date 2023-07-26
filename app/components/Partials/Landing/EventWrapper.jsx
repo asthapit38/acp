@@ -12,14 +12,6 @@ const images = [
     image: EventOne,
     title: "Artisan Meet and Greet",
   },
-  {
-    image: EventTwo,
-    title: "Christmas Craft Markets",
-  },
-  {
-    image: EventThree,
-    title: "Craft Workshops and Demonstrations",
-  },
 ];
 const animation = { duration: 5000 * 8, easing: (t) => t };
 
