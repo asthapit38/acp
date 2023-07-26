@@ -3,7 +3,7 @@ import Button from "./Button";
 
 export default function EventCard({ image, title }) {
   return (
-    <div className="relative w-full mt-16 border h-96">
+    <div className="relative w-full mt-16 border h-[424px]">
       <Image
         src={image}
         fill
