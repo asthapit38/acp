@@ -1,7 +1,6 @@
 import { fetchDataFromApi } from "@/utils/api";
 import FilteredProduct from "./components/FilteredProduct";
 import Image from "next/image";
-import { API_URL } from "@/utils/urls";
 const getCategory = async (slug) => {
   try {
     const { data } = await fetchDataFromApi(
@@ -24,7 +23,7 @@ export default async function Page({ params }) {
 
   return (
     <div className="max-w-5xl px-4 mx-auto mt-6 lg:px-0">
-      <div className="grid items-center grid-cols-1 py-5 border-b lg:grid-cols-2 gap-x-5">
+      <div className="grid items-center grid-cols-1 py-5 border-b lg:grid-cols-[60%_1fr] gap-x-5">
         <div className="text-center">
           <h1 className="text-3xl font-bold leading-relaxed tracking-wider uppercase text-primary font-title ">
             {category[0].attributes.name}
@@ -33,7 +32,7 @@ export default async function Page({ params }) {
             {category[0].attributes.brief}
           </p>
         </div>
-        <div className="hidden w-full overflow-hidden bg-gray-400 rounded-lg aspect-video lg:block">
+        <div className="hidden w-full overflow-hidden bg-gray-400 rounded-lg aspect-sqaure lg:block">
           {category[0].attributes.image_url && (
             <Image
               width="0"

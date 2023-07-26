@@ -28,7 +28,7 @@ const Journal = async () => {
                   title={blog.attributes.name}
                   date={blog.attributes.createdAt}
                   key={blog.id}
-                  imageUrl={blog.attributes.image}
+                  imageUrl={blog.attributes.image_url}
                   slug={blog.attributes.slug}
                 />
               )

@@ -90,12 +90,6 @@ const MobileNavigation = ({ navLists }) => {
                   </motion.a>
                 ))}
               </div>
-              <motion.div
-                variants={itemVariants}
-                className="flex items-center left-nav gap-x-2"
-              >
-                <MagnifyingGlassIcon className="w-8 h-8" />
-              </motion.div>
             </motion.div>
           </motion.aside>
         )}

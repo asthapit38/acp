@@ -33,18 +33,15 @@ export default async function OurJournal() {
         </p>
         <div className="grid justify-start grid-cols-1 gap-6 lg:grid-cols-3">
           {blogs &&
-            blogs.map(
-              (blog) =>
-                blog.attributes.image && (
-                  <BlogCard
-                    title={blog.attributes.name}
-                    date={blog.attributes.createdAt}
-                    key={blog.id}
-                    imageUrl={blog.attributes.image}
-                    slug={blog.attributes.slug}
-                  />
-                )
-            )}
+            blogs.map((blog) => (
+              <BlogCard
+                title={blog.attributes.name}
+                date={blog.attributes.createdAt}
+                key={blog.id}
+                imageUrl={blog.attributes.image_url}
+                slug={blog.attributes.slug}
+              />
+            ))}
         </div>
       </Container>
     </>

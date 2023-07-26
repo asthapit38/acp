@@ -11,3 +11,7 @@
 * {
     outline: 1px solid red;
 } */
+
+.is-sticky {
+  @apply fixed top-4
+}

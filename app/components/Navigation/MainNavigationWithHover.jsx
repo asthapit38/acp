@@ -49,9 +49,6 @@ const MainNavigationWithHover = async () => {
             </li>
           ))}
         </div>
-        <div className="flex items-center left-nav gap-x-2">
-          <MagnifyingGlassIcon className="w-5 h-5" />
-        </div>
       </ul>
       <MobileNavigation navLists={navLists} />
     </div>

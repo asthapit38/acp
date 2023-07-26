@@ -23,7 +23,7 @@ export async function generateMetadata({ params }) {
 export default async function Page({ params }) {
   const blog = await getBlog(params.slug);
   const title = blog.attributes.name;
-  const imageUrl = blog.attributes.image.data[0].attributes.formats.medium.url;
+  const imageUrl = blog.attributes.image_url;
 
   return (
     <>

@@ -1,7 +1,6 @@
 "use client";
-import { Swiper, SwiperSlide, useSwiper } from "swiper/react";
+import { Swiper, SwiperSlide } from "swiper/react";
 import React, { useCallback, useRef } from "react";
-import { API_URL } from "@/utils/urls";
 import "swiper/css";
 import Image from "next/image";
 import Link from "next/link";
@@ -29,7 +28,7 @@ export default function CategorySlider({ categories }) {
   }, []);
 
   return (
-    <div>
+    <>
       <div className="flex items-center justify-end mb-2 gap-x-2">
         <Button size="small" intent="secondary" onPress={handlePrev}>
           <ChevronLeftIcon className="w-6 h-6" />
@@ -94,6 +93,6 @@ export default function CategorySlider({ categories }) {
             </SwiperSlide>
           ))}
       </Swiper>
-    </div>
+    </>
   );
 }
