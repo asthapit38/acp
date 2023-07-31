@@ -13,8 +13,9 @@ export const metadata = {
 export default async function ArtisanStory() {
   const stories = await getStories();
   return (
-    <div className="max-w-5xl px-4 mx-auto mt-6 lg:px-0">
-      <StorySlider stories={stories} />
+    <div className=" bg-story-bg bg-cover bg-no-repeat bg-[40vw_0] min-h-[45vh] -mb-16">
+      {" "}
+      <StorySlider stories={stories} />{" "}
     </div>
   );
 }

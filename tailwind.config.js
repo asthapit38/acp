@@ -24,6 +24,7 @@ module.exports = {
         "fill-up": "inset 6.5em 0 0 0 #A21E47",
       },
       backgroundImage: {
+        "story-bg": "url('/images/story-bg-color.png')",
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
